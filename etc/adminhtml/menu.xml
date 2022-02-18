@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Productflow_Endpoint::parent" title="Productflow Job Queue" module="Productflow_Endpoint" sortOrder="100" resource="Productflow_Endpoint::parent"/>
+        <add id="Productflow_Endpoint::index" title="Productflow Job Queue" module="Productflow_Endpoint" sortOrder="10" action="productflow/index" resource="Productflow_Endpoint::index" parent="Productflow_Endpoint::parent"/>
+		
+    </menu>
+</config>

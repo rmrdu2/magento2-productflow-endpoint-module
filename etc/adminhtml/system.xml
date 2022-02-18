@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+     <system>
+         <tab id="productflow_config" translate="label" sortOrder="110">
+             <label>Productflow</label>
+         </tab>
+         <section id="productflow" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+             <class>separator-top</class>
+             <label>Productflow Endpoint</label>
+             <tab>productflow_config</tab>
+             <resource>Productflow_Endpoint::acl_path</resource>
+             <group id="endpoint" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                 <label>Productflow Endpoint Configuration</label>
+                 <attribute type="expanded">1</attribute>
+                 <field id="access_token" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                     <label>Access Token</label>
+                     <comment>System > Extensions > Integration > Addnew Itegration and Get the access token</comment>
+                 </field>
+                 <field id="button_id" translate="label" type="button" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Export Datamodel</label>
+                    <frontend_model>Productflow\Endpoint\Block\System\Config\Button</frontend_model>
+                </field>
+             </group>
+        </section>
+     </system>
+</config>

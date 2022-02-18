@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Productflow\Endpoint\Api\ProductsManagementInterface" type="Productflow\Endpoint\Model\ProductsManagement" />
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="productflow_endpoint_payload_queue_data_source" xsi:type="string">
+                    ProductflowJobScheduleCollection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="ProductflowJobScheduleCollection" type="Productflow\Endpoint\Model\ResourceModel\Job\Schedule\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">prductflow_cron_schedule</argument>
+            <argument name="resourceModel" xsi:type="string">Productflow\Endpoint\Model\ResourceModel\Job\Schedule</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Catalog\Block\Adminhtml\Product\Attribute\Edit\Tab\Advanced">
+        <plugin name="productflow_endpoint_attribute_edit_form" type="Productflow\Endpoint\Plugin\Block\Adminhtml\Product\Attribute\Edit\Tab\Advanced" sortOrder="1"/>
+    </type>
+</config>
