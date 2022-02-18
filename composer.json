@@ -1,5 +1,5 @@
 {
-    "name": "productflow/module-endpoint",
+    "name": "rmrdu2/magento2-productflow-endpoint-module",
     "description": "Klikensteen Magento 2 module for connecting m2 to productflow",
     "type": "magento2-module",
     "license": [
